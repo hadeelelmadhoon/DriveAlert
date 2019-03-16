@@ -52,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="Background" destination="noA-ub-x53" id="e1O-FN-RKZ"/>
+                        <outlet property="btn" destination="Aft-uH-2UM" id="Drr-aN-V68"/>
                         <outlet property="sceneView" destination="8bC-Xf-vdC" id="dQ9-Bp-Qxo"/>
                     </connections>
                 </viewController>

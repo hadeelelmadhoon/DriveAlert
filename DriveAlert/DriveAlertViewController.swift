@@ -18,6 +18,7 @@ class DriveAlertViewController: UIViewController {
     static var started:Bool = false
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBOutlet weak var btn: UIButton!
     
     @IBOutlet weak var Background: UIImageView!
     
@@ -25,6 +26,7 @@ class DriveAlertViewController: UIViewController {
            DriveAlertViewController.started = true
         print("btn")
          Background.image = UIImage(named: "green")
+        btn.setTitle("STOP", for: .normal)
     }
     
     
