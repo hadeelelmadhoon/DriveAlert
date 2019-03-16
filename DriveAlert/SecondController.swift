@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondController.swift
 //  DriveAlert
 //
 //  Created by Hadeel Elmadhoon on 2019-03-16.
@@ -12,39 +12,22 @@ import AVFoundation
 import AudioToolbox
 
 
-class DriveAlertViewController: UIViewController {
-
+class SecondController: UIViewController {
+    
     static var count:Int = 0
-    static var started:Bool = false
-    @IBOutlet var sceneView: ARSCNView!
     
     
-    @IBOutlet weak var Background: UIImageView!
-    
-    @IBAction func startButton(_ sender: UIButton, forEvent event: UIEvent) {
-           DriveAlertViewController.started = true
-        print("btn")
-         Background.image = UIImage(named: "green")
-    }
-    
-    
-//    @IBAction func startBtn(_ sender: UIButton) {
-//        started = true
-//    }
-//
-    
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
-    
+        
         sceneView.delegate = self
     }
-
-
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -53,7 +36,6 @@ class DriveAlertViewController: UIViewController {
         
         // 2
         sceneView.session.run(configuration)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,7 +57,7 @@ class DriveAlertViewController: UIViewController {
 }
 
 // 1
-extension DriveAlertViewController: ARSCNViewDelegate {
+extension SecondController: ARSCNViewDelegate {
     // 2
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
@@ -111,29 +93,24 @@ extension DriveAlertViewController: ARSCNViewDelegate {
         
         // 3
         faceGeometry.update(from: faceAnchor.geometry)
-        if eyesClosed(from: faceAnchor) == true &&  DriveAlertViewController.started == true{
+        if eyesClosed(from: faceAnchor) == true ||  SecondController.started == true{
             //print("closed!")
-           
-            DriveAlertViewController.count+=1
+            SecondController.count+=1
             //print( DriveAlertViewController.count)
         }
-            
-        else if eyesClosed(from: faceAnchor) != true &&  DriveAlertViewController.started == true
-        {
-            DriveAlertViewController.count=0
-             Background.image = UIImage(named: "green")
+        else{
+            SecondController.count=0
             //green
         }
-            
-        if DriveAlertViewController.count>=50 {
+        
+        if SecondController.count>=175 {
             AudioServicesPlaySystemSound(SystemSoundID(1304))
-            Background.image = UIImage(named: "red")
             
         }
-//        var count: Int = 0
-//        while eyesClosed(from: faceAnchor) == true{
-//            count += 1
-//        }
-//        print(count)
+        //        var count: Int = 0
+        //        while eyesClosed(from: faceAnchor) == true{
+        //            count += 1
+        //        }
+        //        print(count)
     }
 }

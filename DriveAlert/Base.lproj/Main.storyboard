@@ -18,27 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circles2" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-nG-Ryr">
-                                <rect key="frame" x="-2" y="309" width="408" height="302"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple" translatesAutoresizingMaskIntoConstraints="NO" id="noA-ub-x53">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-KY-e5X">
-                                <rect key="frame" x="145" y="315" width="124" height="59"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circles2" translatesAutoresizingMaskIntoConstraints="NO" id="eko-FS-X2l">
+                                <rect key="frame" x="3" y="297" width="408" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-uH-2UM">
+                                <rect key="frame" x="148" y="301" width="124" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
-                                <color key="tintColor" red="0.8901960784313725" green="0.82352941176470584" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.89019607840000003" green="0.82352941180000006" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fXo-K4-AQP" kind="show" id="fd4-hs-R37"/>
+                                    <action selector="startButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6la-In-cdP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-hills-2" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-YI-Fjq">
+                                <rect key="frame" x="0.0" y="400" width="411" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car-better" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-z6-vpG">
+                                <rect key="frame" x="22" y="437" width="303" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686274509804" green="0.41568627450980389" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Background" destination="noA-ub-x53" id="e1O-FN-RKZ"/>
                         <outlet property="sceneView" destination="8bC-Xf-vdC" id="dQ9-Bp-Qxo"/>
                     </connections>
                 </viewController>
@@ -49,20 +62,16 @@
         <!--View Controller-->
         <scene sceneID="Bua-3n-pG2">
             <objects>
-                <viewController id="fXo-K4-AQP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fRy-nD-zbT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="WV1-i8-OKi"/>
-                    </view>
-                </viewController>
+                <viewController id="fXo-K4-AQP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUs-5G-KCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="34"/>
+            <point key="canvasLocation" x="900" y="33"/>
         </scene>
     </scenes>
     <resources>
+        <image name="car-better" width="500" height="1018"/>
         <image name="circles2" width="500" height="1018"/>
+        <image name="purple" width="500" height="1018"/>
+        <image name="white-hills-2" width="500" height="1018"/>
     </resources>
 </document>
