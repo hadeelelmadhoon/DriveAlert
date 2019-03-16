@@ -8,11 +8,18 @@
 
 import UIKit
 import ARKit
+import AVFoundation
+import AudioToolbox
+
 
 class DriveAlertViewController: UIViewController {
 
-
+    static var count:Int = 0
     @IBOutlet var sceneView: ARSCNView!
+    
+    @IBAction func GoToGreen(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartBtn", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +97,18 @@ extension DriveAlertViewController: ARSCNViewDelegate {
         // 3
         faceGeometry.update(from: faceAnchor.geometry)
         if eyesClosed(from: faceAnchor) == true{
-            print("closed!")
+            //print("closed!")
+            DriveAlertViewController.count+=1
+            //print( DriveAlertViewController.count)
+        }
+        else{
+            DriveAlertViewController.count=0
+            //green
+        }
+            
+        if DriveAlertViewController.count>=175{
+            AudioServicesPlaySystemSound(SystemSoundID(1304))
+            
         }
 //        var count: Int = 0
 //        while eyesClosed(from: faceAnchor) == true{
