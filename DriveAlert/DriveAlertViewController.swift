@@ -23,10 +23,19 @@ class DriveAlertViewController: UIViewController {
     @IBOutlet weak var Background: UIImageView!
     
     @IBAction func startButton(_ sender: UIButton, forEvent event: UIEvent) {
-           DriveAlertViewController.started = true
+        if (DriveAlertViewController.started == false){
+        DriveAlertViewController.started = true
         print("btn")
          Background.image = UIImage(named: "green")
-        btn.setTitle("STOP", for: .normal)
+            btn.setTitle("STOP", for: .normal)
+            
+        }
+        else{
+            DriveAlertViewController.started = false
+            print("btn")
+            Background.image = UIImage(named: "purple")
+            btn.setTitle("START", for: .normal)
+        }
     }
     
     
