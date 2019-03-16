@@ -17,9 +17,14 @@ class DriveAlertViewController: UIViewController {
     static var count:Int = 0
     @IBOutlet var sceneView: ARSCNView!
     
-    @IBAction func GoToGreen(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "StartBtn", sender: self)
-    }
+    
+    
+//    @IBAction func startBtn(_ sender: UIButton) {
+//        started = true
+//    }
+//
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +101,7 @@ extension DriveAlertViewController: ARSCNViewDelegate {
         
         // 3
         faceGeometry.update(from: faceAnchor.geometry)
-        if eyesClosed(from: faceAnchor) == true{
+        if eyesClosed(from: faceAnchor) == true {
             //print("closed!")
             DriveAlertViewController.count+=1
             //print( DriveAlertViewController.count)
@@ -106,7 +111,7 @@ extension DriveAlertViewController: ARSCNViewDelegate {
             //green
         }
             
-        if DriveAlertViewController.count>=175{
+        if DriveAlertViewController.count>=175 {
             AudioServicesPlaySystemSound(SystemSoundID(1304))
             
         }

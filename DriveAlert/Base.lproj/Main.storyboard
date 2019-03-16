@@ -18,23 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-nG-Ryr">
-                                <rect key="frame" x="23" y="276" width="371" height="344"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circles2" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-nG-Ryr">
+                                <rect key="frame" x="-2" y="309" width="408" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNK-KY-e5X">
-                                <rect key="frame" x="153" y="315" width="124" height="59"/>
+                                <rect key="frame" x="145" y="315" width="124" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
                                 <color key="tintColor" red="0.8901960784313725" green="0.82352941176470584" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fXo-K4-AQP" kind="show" id="fd4-hs-R37"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white-hills" translatesAutoresizingMaskIntoConstraints="NO" id="zJv-uE-tLF">
-                                <rect key="frame" x="-31" y="382" width="552" height="243"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686274509804" green="0.41568627450980389" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,7 +63,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circles" width="166.66667175292969" height="339.33334350585938"/>
-        <image name="white-hills" width="166.66667175292969" height="339.33334350585938"/>
+        <image name="circles2" width="500" height="1018"/>
     </resources>
 </document>
