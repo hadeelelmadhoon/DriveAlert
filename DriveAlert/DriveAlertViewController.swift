@@ -40,6 +40,16 @@ class DriveAlertViewController: UIViewController {
         // 1
         sceneView.session.pause()
     }
+    
+    func eyesClosed(from: ARFaceAnchor)->Bool {
+        guard let eyeBlinkLeft = from.blendShapes[.eyeBlinkLeft], let eyeBlinkRight = from.blendShapes[.eyeBlinkRight] else {
+            return false
+        }
+        // from testing: 0.5 is a lightish smile and 0.9 is an exagerrated smile
+        return eyeBlinkLeft.floatValue >= 0.9 && eyeBlinkRight.floatValue >= 0.9
+    }
+    
+    
 }
 
 // 1
@@ -79,5 +89,8 @@ extension DriveAlertViewController: ARSCNViewDelegate {
         
         // 3
         faceGeometry.update(from: faceAnchor.geometry)
+        if eyesClosed(from: faceAnchor) == true{
+            print("closed!")
+        }
     }
 }
