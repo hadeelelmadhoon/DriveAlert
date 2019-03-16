@@ -11,7 +11,7 @@ import ARKit
 
 class DriveAlertViewController: UIViewController {
 
-    
+
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -92,5 +92,10 @@ extension DriveAlertViewController: ARSCNViewDelegate {
         if eyesClosed(from: faceAnchor) == true{
             print("closed!")
         }
+//        var count: Int = 0
+//        while eyesClosed(from: faceAnchor) == true{
+//            count += 1
+//        }
+//        print(count)
     }
 }
