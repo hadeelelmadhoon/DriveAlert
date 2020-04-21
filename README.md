@@ -1,5 +1,7 @@
 # DriveAlert
 
+![Image description](driveAlertApp.png)
+
 ## Inspiration 
 No one knows the exact moment sleep comes over their bodies. Any driver from commercial vehicles, to late night shift workers, and drivers with untreated sleep disorders are susceptible to drowsy driving. It is estimated that 1 in 25 drivers have fallen asleep while driving in the last 30 days, and the National Highway Traffic Safety Administration estimates drowsy driving is responsible for 90,000 crashes, 44,000 injuries, and 795 deaths. There are up to 6,000 fatal crashes due to drowsy driving each year. DriveAlert was developed with the intention to decrease these numbers and save more lives.
 
